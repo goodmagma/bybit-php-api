@@ -3,7 +3,7 @@
 namespace ByBit\SDK;
 
 /**
- * 
+ * Api Response Wrapper
  *
  */
 class ApiResponse {

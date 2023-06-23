@@ -8,7 +8,7 @@ use ByBit\SDK\Exceptions\InvalidApiUriException;
 use ByBit\SDK\Exceptions\HttpException;
 
 /**
- * 
+ * Api Request Wrapper
  *
  */
 class ApiRequest {
@@ -106,8 +106,6 @@ class ApiRequest {
             $options['headers']['X-BAPI-SIGN-TYPE'] = self::BAPI_SIGN_TYPE;
             $options['headers']['X-BAPI-TIMESTAMP'] = $timestamp;
             $options['headers']['X-BAPI-RECV-WINDOW'] = self::BAPI_RECV_WINDOW;
-            
-            var_dump( $options['headers'] );
         }
 
         $hasParams = !empty($params);
@@ -133,6 +131,7 @@ class ApiRequest {
                 throw $exception;
         }
         
+        //initialize Guzzle Client
         $client = new Client($config);
         
         try {

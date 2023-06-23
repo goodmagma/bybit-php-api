@@ -7,7 +7,7 @@ use ByBit\SDK\Api\AccountApi;
 use ByBit\SDK\Api\TradeApi;
 
 /**
- * ByBitApi class
+ * ByBitApi Client
  *
  */
 class ByBitApi {
