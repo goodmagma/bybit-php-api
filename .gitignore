@@ -2,3 +2,7 @@ vendor
 .idea
 *.swap
 composer.lock
+.buildpath
+.project
+.settings
+examples/key_secret.php
