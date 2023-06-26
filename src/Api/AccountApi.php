@@ -22,5 +22,5 @@ class AccountApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, '/v5/account/wallet-balance', $params);
         return $response->getApiData();
     }
-
+    
 }
