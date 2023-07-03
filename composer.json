@@ -1,20 +1,25 @@
 {
-    "name": "denistorresan/bybit-php-api",
-    "description": "PHP SDK for ByBit V5 API",
-    "type": "library",
-    "require": {
-        "guzzlehttp/guzzle": "^7.7"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "ByBit\\SDK\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Denis Torresan",
-            "email": "denis.torresan@gmail.com"
-        }
-    ]
+	"name" : "denistorresan/bybit-php-api",
+	"description" : "PHP SDK for ByBit V5 API",
+	"keywords" : [
+		"bybit",
+		"api",
+		"sdk"
+	],
+	"type" : "library",
+	"require" : {
+		"php" : "^7.2.5 || ^8.0",
+		"guzzlehttp/guzzle" : "^7.7"
+	},
+	"license" : "MIT",
+	"autoload" : {
+		"psr-4" : {
+			"ByBit\\SDK\\" : "src/"
+		}
+	},
+	"authors" : [{
+			"name" : "Denis Torresan",
+			"email" : "denis.torresan@gmail.com"
+		}
+	]
 }
