@@ -17,9 +17,16 @@
 			"ByBit\\SDK\\" : "src/"
 		}
 	},
+	"homepage" : "https://github.com/denistorresan/bybit-php-api",
 	"authors" : [{
 			"name" : "Denis Torresan",
 			"email" : "denis.torresan@gmail.com"
 		}
-	]
+	],
+	"minimum-stability" : "dev",
+	"prefer-stable" : true,
+	"config" : {
+		"optimize-autoloader" : true,
+		"secure-http" : false
+	}
 }

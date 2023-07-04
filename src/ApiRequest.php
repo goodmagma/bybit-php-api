@@ -1,7 +1,6 @@
 <?php
 namespace ByBit\SDK;
 
-
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Client;
 use ByBit\SDK\Exceptions\InvalidApiUriException;
@@ -57,7 +56,7 @@ class ApiRequest {
      * @param array $params
      * @param array $headers
      * @param int $timeout
-     * @return Response
+     * @return ResponseInterface
      * @throws Exceptions\HttpException
      * @throws Exceptions\InvalidApiUriException
      */
@@ -145,12 +144,15 @@ class ApiRequest {
             }
 
             return $response;
-        } catch (\GuzzleHttp\Exception\GuzzleException $e) {
+        } 
+        catch (\GuzzleHttp\Exception\GuzzleException $e) {
             $exception = new HttpException($e->getMessage(), $e->getCode(), $e);
             throw $exception;
-        } catch (HttpException $exception) {
+        }
+        catch (HttpException $exception) {
             throw $exception;
-        } catch (\Exception $e) {
+        } 
+        catch (\Exception $e) {
             $exception = new HttpException($e->getMessage(), $e->getCode(), $e);
             throw $exception;
         }

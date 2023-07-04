@@ -62,4 +62,16 @@ class PositionApi extends ApiRequest {
         return $response->getApiData();
     }
     
+    
+    /**
+     * Switch Cross/Isolated Margin
+     * @see https://bybit-exchange.github.io/docs/v5/position/cross-isolate
+     *
+     * @param $params array
+     * @return array
+     */
+    public function setTradingStop($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/trading-stop', $params);
+        return $response->getApiData();
+    }
 }

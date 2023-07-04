@@ -74,4 +74,17 @@ class TradeApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_POST, '/v5/order/cancel-all', $params);
         return $response->getApiData();
     }
+    
+    
+    /**
+     * Get Order History
+     * @see https://bybit-exchange.github.io/docs/v5/order/order-list
+     *
+     * @param $params array
+     * @return array
+     */
+    public function getOrderHistory($params) {
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/order/history', $params);
+        return $response->getApiData();
+    }
 }
