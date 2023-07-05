@@ -4,7 +4,8 @@
 	"keywords" : [
 		"bybit",
 		"api",
-		"sdk"
+		"sdk",
+		"v5"
 	],
 	"type" : "library",
 	"require" : {
