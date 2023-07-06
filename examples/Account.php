@@ -11,6 +11,6 @@ $bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 
 // Get Wallet Balance
 // https://bybit-exchange.github.io/docs/v5/account/wallet-balance
-$params = ['accountType' => AccountType::UNIFIED];
-$wallet = $bybitApi->accountApi()->getWalletBalance($params);
-var_dump($wallet);
+$params = ['accountType' => AccountType::CONTRACT];
+$positions = $bybitApi->accountApi()->getWalletBalance($params);
+var_dump($positions);

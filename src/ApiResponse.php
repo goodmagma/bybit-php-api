@@ -20,10 +20,19 @@ class ApiResponse {
 
     protected $body;
 
+    /**
+     * Constructor
+     * 
+     * @param unknown $guzzleResponse
+     */
     public function __construct($guzzleResponse) {
         $this->httpResponse = $guzzleResponse;
     }
 
+    /**
+     * Get body content
+     * @return mixed
+     */
     public function getBody() {
         if (is_null($this->body)) {
             $this->body = json_decode($this->httpResponse->getBody()->getContents(), true);
@@ -31,20 +40,36 @@ class ApiResponse {
         return $this->body;
     }
 
+    /**
+     * 
+     * @return number|mixed
+     */
     public function getApiCode() {
         $body = $this->getBody();
-        return isset($body['retCode']) ? $body['retCode'] : '';
+        return isset($body['retCode']) ? $body['retCode'] : -1;
     }
 
+    /**
+     * 
+     * @return string|mixed
+     */
     public function getApiMessage() {
         $body = $this->getBody();
         return isset($body['retMsg']) ? $body['retMsg'] : '';
     }
 
+    /**
+     * 
+     * @return \ByBit\SDK\Response
+     */
     public function getHttpResponse() {
         return $this->httpResponse;
     }
 
+    /**
+     * 
+     * @return boolean
+     */
     public function isSuccessful() {
         if ($this->httpResponse->getStatusCode() == 200) {
             if ($this->getApiCode() == self::SUCCESS) {
