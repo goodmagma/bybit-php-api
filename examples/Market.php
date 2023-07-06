@@ -6,7 +6,7 @@ include '../vendor/autoload.php';
 include 'key_secret.php';
 
 //create public API (no auth required)
-$bybitApi = new ByBitApi();
+$bybitApi = new ByBitApi('', '', $sandbox);
 
 // Get Kline
 // https://bybit-exchange.github.io/docs/v5/market/kline
