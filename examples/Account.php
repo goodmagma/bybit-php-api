@@ -1,5 +1,6 @@
 <?php
 use ByBit\SDK\ByBitApi;
+use ByBit\SDK\Enums\AccountType;
 
 include '../vendor/autoload.php';
 
@@ -10,6 +11,6 @@ $bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 
 // Get Wallet Balance
 // https://bybit-exchange.github.io/docs/v5/account/wallet-balance
-$params = ['accountType' => 'UNIFIED'];
-$positions = $bybitApi->accountApi()->getWalletBalance($params);
-var_dump($positions);
+$params = ['accountType' => AccountType::UNIFIED];
+$wallet = $bybitApi->accountApi()->getWalletBalance($params);
+var_dump($wallet);

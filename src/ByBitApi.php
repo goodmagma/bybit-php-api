@@ -50,7 +50,7 @@ class ByBitApi {
      * @param string $secret
      * @param string $host
      */
-    function __construct(string $key = '', string $secret = '', bool $sandbox = true) {
+    function __construct($key = '', $secret = '', $sandbox = true) {
         $this->key = $key;
         $this->secret = $secret;
         $this->host = $sandbox ? self::SANDBOX_API_URL : self::PROD_API_URL;
