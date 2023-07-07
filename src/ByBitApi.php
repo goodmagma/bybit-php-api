@@ -5,6 +5,7 @@ use ByBit\SDK\Api\MarketApi;
 use ByBit\SDK\Api\PositionApi;
 use ByBit\SDK\Api\AccountApi;
 use ByBit\SDK\Api\TradeApi;
+use ByBit\SDK\Api\UserApi;
 
 /**
  * ByBitApi Client
@@ -64,6 +65,14 @@ class ByBitApi {
         return new MarketApi($this->key, $this->secret, $this->host);
     }
     
+    
+    /**
+     * Get Trade Api
+     */
+    public function tradeApi(){
+        return new TradeApi($this->key, $this->secret, $this->host);
+    }
+    
 
     /**
      * Get Position Api
@@ -82,9 +91,9 @@ class ByBitApi {
     
     
     /**
-     * Get Trade Api
+     * Get Account Api
      */
-    public function tradeApi(){
-        return new TradeApi($this->key, $this->secret, $this->host);
+    public function userApi(){
+        return new UserApi($this->key, $this->secret, $this->host);
     }
 }
