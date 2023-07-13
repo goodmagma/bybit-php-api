@@ -9,8 +9,13 @@ include 'key_secret.php';
 //create private API
 $bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 
+// Get Account Info
+$params = [];
+$result = $bybitApi->accountApi()->getAccountInfo($params);
+var_dump($result);
+
+
 // Get Wallet Balance
-// https://bybit-exchange.github.io/docs/v5/account/wallet-balance
 $params = ['accountType' => AccountType::CONTRACT];
-$positions = $bybitApi->accountApi()->getWalletBalance($params);
-var_dump($positions);
+$result = $bybitApi->accountApi()->getWalletBalance($params);
+var_dump($result);
