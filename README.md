@@ -10,16 +10,25 @@ The detailed API documentation can be found here [https://bybit-exchange.github.
 
 This project is under development, and already used in production, but only the main API's are covered. I promise I'll do my best to complete the client with all ByBit V5 API's, but if you have time, any contributions are welcome!
 
-Actually the API's completed are:
+Actually the API's completion status are the following:
 
-- Market: 100%
-- Trade: 100%
-- Position: 100%
-- Pre-Upgrade: 100%
-- Account: 100%
-- Asset: 100%
-- User: 100%
 
+ API Name                   | Completed | Doc Ref                                                  
+----------------------------|-----------|---------------------------------------------------
+ Market API                 | 100%      | [Market API Doc](https://bybit-exchange.github.io/docs/v5/market/time)
+ Trade API                  | 100%      | [Trade API Doc](https://bybit-exchange.github.io/docs/v5/order/create-order)
+ Position API               | 100%      | [Position API Doc](https://bybit-exchange.github.io/docs/v5/position)
+ Pre-Upgrade API            | 100%      | [Pre-Upgrade API Doc](https://bybit-exchange.github.io/docs/v5/pre-upgrade/order-list)
+ Account API                | 100%      | [Account API Doc](https://bybit-exchange.github.io/docs/v5/account/wallet-balance)
+ Asset API                  | 100%      | [Asset API Doc](https://bybit-exchange.github.io/docs/v5/asset/exchange)
+ User API                   | 100%      | [Asset API Doc](https://bybit-exchange.github.io/docs/v5/user/create-subuid)
+ Spot Leverage Token        | 0%        | [Spot Leverage Token API Doc](https://bybit-exchange.github.io/docs/v5/lt/leverage-token-info)
+ Spot Margin Trade (UTA)    | 0%        | [Spot Margin Trade (UTA) API Doc](https://bybit-exchange.github.io/docs/v5/spot-margin-uta/vip-margin)
+ Spot Margin Trade (Normal) | 0%        | [Spot Margin Trade (Normal) API Doc](https://bybit-exchange.github.io/docs/v5/spot-margin-normal/vip-margin)
+ Institutional Lending      | 0%        | [Institutional Lending API Doc](https://bybit-exchange.github.io/docs/v5/otc/margin-product-info)
+ C2C Lending                | 0%        | [C2C Lending API Doc](https://bybit-exchange.github.io/docs/v5/c2c-lend/coin-info)
+ Broker                     | 0%        | [Broker API Doc](https://bybit-exchange.github.io/docs/v5/broker/earning)
+ WebSocket Stream           | 0%        | [WebSocket Stream API Doc](https://bybit-exchange.github.io/docs/v5/ws/connect)
 
 ## Install
 
