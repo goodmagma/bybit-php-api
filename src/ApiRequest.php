@@ -56,7 +56,7 @@ class ApiRequest {
      * @param array $params
      * @param array $headers
      * @param int $timeout
-     * @return ResponseInterface
+     * @return ApiResponse
      * @throws Exceptions\HttpException
      * @throws Exceptions\InvalidApiUriException
      */

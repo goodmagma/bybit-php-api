@@ -38,19 +38,6 @@ class PositionApi extends ApiRequest {
     
     
     /**
-     * Switch Position Mode
-     * @see https://bybit-exchange.github.io/docs/v5/position/position-mode
-     *
-     * @param $params array
-     * @return array
-     */
-    public function switchPositionMode($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/switch-mode', $params);
-        return $response->getApiData();
-    }
-   
-    
-    /**
      * Switch Cross/Isolated Margin
      * @see https://bybit-exchange.github.io/docs/v5/position/cross-isolate
      *
@@ -64,14 +51,105 @@ class PositionApi extends ApiRequest {
     
     
     /**
-     * Switch Cross/Isolated Margin
-     * @see https://bybit-exchange.github.io/docs/v5/position/cross-isolate
+     * Set TP/SL Mode
+     * @see https://bybit-exchange.github.io/docs/v5/position/tpsl-mode
+     *
+     * @param $params array
+     * @return array
+     */
+    public function setTPSLMode($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/set-tpsl-mode', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Switch Position Mode
+     * @see https://bybit-exchange.github.io/docs/v5/position/position-mode
+     *
+     * @param $params array
+     * @return array
+     */
+    public function switchPositionMode($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/switch-mode', $params);
+        return $response->getApiData();
+    }
+
+    
+    /**
+     * Set Risk Limit
+     * @see https://bybit-exchange.github.io/docs/v5/position/set-risk-limit
+     *
+     * @param $params array
+     * @return array
+     */
+    public function setRiskLimit($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/set-risk-limit', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Set Trading Stop
+     * @see https://bybit-exchange.github.io/docs/v5/position/trading-stop
      *
      * @param $params array
      * @return array
      */
     public function setTradingStop($params) {
         $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/trading-stop', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Set Auto Add Margin
+     * @see https://bybit-exchange.github.io/docs/v5/position/auto-add-margin
+     *
+     * @param $params array
+     * @return array
+     */
+    public function setAutoAddMargin($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/set-auto-add-margin', $params);
+        return $response->getApiData();
+    }
+    
+
+    /**
+     * Add Or Reduce Margin
+     * @see https://bybit-exchange.github.io/docs/v5/position/manual-add-margin
+     *
+     * @param $params array
+     * @return array
+     */
+    public function addOrReduceMargin($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/position/add-margin', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Get Execution
+     * @see https://bybit-exchange.github.io/docs/v5/position/execution
+     *
+     * @param $params array
+     * @return array
+     */
+    public function getExecution($params) {
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/execution/list', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Get Closed PnL
+     * @see https://bybit-exchange.github.io/docs/v5/position/close-pnl
+     *
+     * @param $params array
+     * @return array
+     */
+    public function getClosedPnL($params) {
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/position/closed-pnl', $params);
         return $response->getApiData();
     }
 }

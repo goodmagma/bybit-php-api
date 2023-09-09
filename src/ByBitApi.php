@@ -5,6 +5,8 @@ use ByBit\SDK\Api\MarketApi;
 use ByBit\SDK\Api\PositionApi;
 use ByBit\SDK\Api\AccountApi;
 use ByBit\SDK\Api\TradeApi;
+use ByBit\SDK\Api\UserApi;
+use ByBit\SDK\Api\AssetApi;
 
 /**
  * ByBitApi Client
@@ -20,12 +22,22 @@ class ByBitApi {
     /**
      * @var string SDK Version
      */
-    const VERSION = "1.0.0";
+    const VERSION = "0.1.0";
     
     /**
      * @var string SDK update date
      */
-    const UPDATE_DATE = "2023.06.22";
+    const UPDATE_DATE = "2023.09.09";
+
+    /**
+     * @var string sandbox API URL
+     */
+    const SANDBOX_API_URL = "https://api-testnet.bybit.com";
+
+    /**
+     * @var string prod API URL
+     */
+    const PROD_API_URL = "https://api.bybit.com";
     
     
     protected $key;
@@ -40,10 +52,10 @@ class ByBitApi {
      * @param string $secret
      * @param string $host
      */
-    function __construct(string $key = '', string $secret = '', string $host = 'https://api.bybit.com') {
+    function __construct($key = '', $secret = '', $sandbox = true) {
         $this->key = $key;
         $this->secret = $secret;
-        $this->host = $host;
+        $this->host = $sandbox ? self::SANDBOX_API_URL : self::PROD_API_URL;
     }
     
     
@@ -51,23 +63,7 @@ class ByBitApi {
      * Get Market Api
      */
     public function marketApi(){
-        return  new MarketApi($this->key, $this->secret, $this->host);
-    }
-    
-
-    /**
-     * Get Position Api
-     */
-    public function positionApi(){
-        return  new PositionApi($this->key, $this->secret, $this->host);
-    }
-    
-    
-    /**
-     * Get Account Api
-     */
-    public function accountApi(){
-        return  new AccountApi($this->key, $this->secret, $this->host);
+        return new MarketApi($this->key, $this->secret, $this->host);
     }
     
     
@@ -75,6 +71,36 @@ class ByBitApi {
      * Get Trade Api
      */
     public function tradeApi(){
-        return  new TradeApi($this->key, $this->secret, $this->host);
+        return new TradeApi($this->key, $this->secret, $this->host);
+    }
+    
+
+    /**
+     * Get Position Api
+     */
+    public function positionApi(){
+        return new PositionApi($this->key, $this->secret, $this->host);
+    }
+    
+    
+    /**
+     * Get Account Api
+     */
+    public function accountApi(){
+        return new AccountApi($this->key, $this->secret, $this->host);
+    }
+    
+    /**
+     * Get Asset Api
+     */
+    public function assetApi(){
+        return new AssetApi($this->key, $this->secret, $this->host);
+    }
+    
+    /**
+     * Get Account Api
+     */
+    public function userApi(){
+        return new UserApi($this->key, $this->secret, $this->host);
     }
 }

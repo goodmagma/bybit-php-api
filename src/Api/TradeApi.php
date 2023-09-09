@@ -87,4 +87,69 @@ class TradeApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, '/v5/order/history', $params);
         return $response->getApiData();
     }
+    
+    
+    /**
+     * Batch Place Order
+     * @see https://bybit-exchange.github.io/docs/v5/order/batch-place
+     *
+     * @param $params array
+     * @return array
+     */
+    public function batchPlaceOrder($params) {
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/order/create-batch', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Batch Amend Order
+     * @see https://bybit-exchange.github.io/docs/v5/order/batch-amend
+     *
+     * @param $params array
+     * @return array
+     */
+    public function batchAmendOrder($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/order/amend-batch', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Batch Cancel Order
+     * @see https://bybit-exchange.github.io/docs/v5/order/batch-cancel
+     *
+     * @param $params array
+     * @return array
+     */
+    public function batchCancelOrder($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/order/cancel-batch', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Get Borrow Quota (Spot)
+     * @see https://bybit-exchange.github.io/docs/v5/order/spot-borrow-quota
+     *
+     * @param $params array
+     * @return array
+     */
+    public function getBorrowQuota($params) {
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/order/spot-borrow-check', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
+     * Set Disconnect Cancel All
+     * @see https://bybit-exchange.github.io/docs/v5/order/dcp
+     *
+     * @param $params array
+     * @return array
+     */
+    public function setDisconnectCancelAll($params) {
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/order/disconnected-cancel-all', $params);
+        return $response->getApiData();
+    }
 }

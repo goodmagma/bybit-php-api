@@ -6,3 +6,4 @@ composer.lock
 .project
 .settings
 examples/key_secret.php
+examples/test_*

@@ -1,12 +1,12 @@
 <?php
-use ByBit\SDK\ByBitApi;
-
 include '../vendor/autoload.php';
+
+use ByBit\SDK\ByBitApi;
 
 include 'key_secret.php';
 
 //create private API
-$bybitApi = new ByBitApi($api_key, $api_secret, $api_url);
+$bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 
 // Place Order
 // https://bybit-exchange.github.io/docs/v5/order/create-order

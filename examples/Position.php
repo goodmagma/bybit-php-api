@@ -1,16 +1,16 @@
 <?php
-use ByBit\SDK\ByBitApi;
-
 include '../vendor/autoload.php';
+
+use ByBit\SDK\ByBitApi;
 
 include 'key_secret.php';
 
 //create private API
-$bybitApi = new ByBitApi($api_key, $api_secret, $api_url);
+$bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 
 // Get Position Info
 // https://bybit-exchange.github.io/docs/v5/position
-$params = ["category" => "linear", "symbol" => "DENTUSDT"];
+$params = ["category" => "linear", "symbol" => "BTCUSDT"];
 $positions = $bybitApi->positionApi()->getPositionInfo($params);
 var_dump($positions);
 
