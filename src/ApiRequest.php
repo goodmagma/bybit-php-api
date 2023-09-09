@@ -112,6 +112,7 @@ class ApiRequest {
         switch ($method) {
             case self::METHOD_GET:
                 if ($hasParams) {
+                    //$options['query'] = $params;
                     $uri = $uri.'?'.$encoded_params;
                 }
                 break;
