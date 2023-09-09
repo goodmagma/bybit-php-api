@@ -1,7 +1,7 @@
 <?php
-use ByBit\SDK\ByBitApi;
-
 include '../vendor/autoload.php';
+
+use ByBit\SDK\ByBitApi;
 
 include 'key_secret.php';
 

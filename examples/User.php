@@ -1,8 +1,8 @@
 <?php
+include '../vendor/autoload.php';
+
 use ByBit\SDK\ByBitApi;
 use ByBit\SDK\Enums\AccountType;
-
-include '../vendor/autoload.php';
 
 include 'key_secret.php';
 

@@ -6,6 +6,7 @@ use ByBit\SDK\Api\PositionApi;
 use ByBit\SDK\Api\AccountApi;
 use ByBit\SDK\Api\TradeApi;
 use ByBit\SDK\Api\UserApi;
+use ByBit\SDK\Api\AssetApi;
 
 /**
  * ByBitApi Client
@@ -21,12 +22,12 @@ class ByBitApi {
     /**
      * @var string SDK Version
      */
-    const VERSION = "1.0.0";
+    const VERSION = "0.0.1";
     
     /**
      * @var string SDK update date
      */
-    const UPDATE_DATE = "2023.06.22";
+    const UPDATE_DATE = "2023.09.09";
 
     /**
      * @var string sandbox API URL
@@ -89,6 +90,12 @@ class ByBitApi {
         return new AccountApi($this->key, $this->secret, $this->host);
     }
     
+    /**
+     * Get Asset Api
+     */
+    public function assetApi(){
+        return new AssetApi($this->key, $this->secret, $this->host);
+    }
     
     /**
      * Get Account Api
