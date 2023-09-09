@@ -12,11 +12,12 @@ This project is under development, and already used in production, but only the 
 
 Actually the API's completed are:
 
-- Market
-- Trade
-- Position
-- Account
-- User
+- Market: 100%
+- Trade: 100%
+- Position: 100%
+- Account: 100%
+- Asset: 100%
+- User: 100%
 
 
 ## Install
