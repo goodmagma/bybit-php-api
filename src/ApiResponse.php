@@ -2,6 +2,8 @@
 
 namespace ByBit\SDK;
 
+use Psr\Http\Message\ResponseInterface;
+
 /**
  * Api Response Wrapper
  *
@@ -14,7 +16,7 @@ class ApiResponse {
     const SUCCESS = 0;
     
     /**
-     * @var Response $httpResponse
+     * @var ResponseInterface $httpResponse
      */
     protected $httpResponse;
 
@@ -23,9 +25,9 @@ class ApiResponse {
     /**
      * Constructor
      * 
-     * @param unknown $guzzleResponse
+     * @param ResponseInterface $guzzleResponse
      */
-    public function __construct($guzzleResponse) {
+    public function __construct(ResponseInterface $guzzleResponse) {
         $this->httpResponse = $guzzleResponse;
     }
 
@@ -41,7 +43,7 @@ class ApiResponse {
     }
 
     /**
-     * 
+     * Get Api Code
      * @return number|mixed
      */
     public function getApiCode() {
@@ -50,7 +52,7 @@ class ApiResponse {
     }
 
     /**
-     * 
+     * Get Api Message
      * @return string|mixed
      */
     public function getApiMessage() {
@@ -59,15 +61,15 @@ class ApiResponse {
     }
 
     /**
-     * 
-     * @return \ByBit\SDK\Response
+     * Get Http Response
+     * @return ResponseInterface
      */
     public function getHttpResponse() {
         return $this->httpResponse;
     }
 
     /**
-     * 
+     * Return true if Api Call is successfully, false otherwise
      * @return boolean
      */
     public function isSuccessful() {
@@ -80,6 +82,7 @@ class ApiResponse {
     }
 
     /**
+     * Get Api Data
      * @return mixed
      */
     public function getApiData() {

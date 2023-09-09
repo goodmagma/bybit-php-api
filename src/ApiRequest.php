@@ -5,6 +5,7 @@ use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Client;
 use ByBit\SDK\Exceptions\InvalidApiUriException;
 use ByBit\SDK\Exceptions\HttpException;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Api Request Wrapper
@@ -56,7 +57,7 @@ class ApiRequest {
      * @param array $params
      * @param array $headers
      * @param int $timeout
-     * @return ApiResponse
+     * @return ResponseInterface 
      * @throws Exceptions\HttpException
      * @throws Exceptions\InvalidApiUriException
      */
