@@ -7,6 +7,7 @@ use ByBit\SDK\Api\AccountApi;
 use ByBit\SDK\Api\TradeApi;
 use ByBit\SDK\Api\UserApi;
 use ByBit\SDK\Api\AssetApi;
+use ByBit\SDK\Api\PreUpgradeApi;
 
 /**
  * ByBitApi Client
@@ -84,11 +85,20 @@ class ByBitApi {
     
     
     /**
+     * Get Pre Upgrade Api
+     */
+    public function preUpgradeApi(){
+        return new PreUpgradeApi($this->key, $this->secret, $this->host);
+    }
+    
+    
+    /**
      * Get Account Api
      */
     public function accountApi(){
         return new AccountApi($this->key, $this->secret, $this->host);
     }
+    
     
     /**
      * Get Asset Api
@@ -97,8 +107,9 @@ class ByBitApi {
         return new AssetApi($this->key, $this->secret, $this->host);
     }
     
+    
     /**
-     * Get Account Api
+     * Get User Api
      */
     public function userApi(){
         return new UserApi($this->key, $this->secret, $this->host);

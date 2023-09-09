@@ -15,6 +15,7 @@ Actually the API's completed are:
 - Market: 100%
 - Trade: 100%
 - Position: 100%
+- Pre-Upgrade: 100%
 - Account: 100%
 - Asset: 100%
 - User: 100%
