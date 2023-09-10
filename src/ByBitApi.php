@@ -23,12 +23,12 @@ class ByBitApi {
     /**
      * @var string SDK Version
      */
-    const VERSION = "0.1.0";
+    const VERSION = "0.2.0";
     
     /**
      * @var string SDK update date
      */
-    const UPDATE_DATE = "2023.09.09";
+    const UPDATE_DATE = "2023.09.10";
 
     /**
      * @var string sandbox API URL
