@@ -51,7 +51,7 @@ class TradeApi extends ApiRequest {
     
     
     /**
-     * Get Open Orders
+     * Get Open Orders (real-time)
      * @see https://bybit-exchange.github.io/docs/v5/order/open-order
      *
      * @param $params array
@@ -77,7 +77,7 @@ class TradeApi extends ApiRequest {
     
     
     /**
-     * Get Order History
+     * Get Order History (2 years)
      * @see https://bybit-exchange.github.io/docs/v5/order/order-list
      *
      * @param $params array
@@ -142,7 +142,7 @@ class TradeApi extends ApiRequest {
     
     
     /**
-     * Set Disconnect Cancel All
+     * Set Disconnect Cancel All (DCP)
      * @see https://bybit-exchange.github.io/docs/v5/order/dcp
      *
      * @param $params array
