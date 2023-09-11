@@ -19,7 +19,7 @@ class SpotMarginTradeUtaApi extends ApiRequest {
      * @return array
      */
     public function getVIPMarginData($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-margin-trade/data', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-margin-trade/data', $params);
         return $response->getApiData();
     }
 
@@ -32,7 +32,7 @@ class SpotMarginTradeUtaApi extends ApiRequest {
      * @return array
      */
     public function toggleMarginTrade($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-margin-trade/switch-mode', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-margin-trade/switch-mode', $params);
         return $response->getApiData();
     }
 
@@ -45,7 +45,7 @@ class SpotMarginTradeUtaApi extends ApiRequest {
      * @return array
      */
     public function setLeverage($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-margin-trade/set-leverage', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-margin-trade/set-leverage', $params);
         return $response->getApiData();
     }
 
@@ -58,7 +58,7 @@ class SpotMarginTradeUtaApi extends ApiRequest {
      * @return array
      */
     public function getStatusAndLeverage($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-margin-trade/state', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-margin-trade/state', $params);
         return $response->getApiData();
     }
 

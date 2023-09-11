@@ -50,7 +50,7 @@ function get_get_request($htmlContent) {
         $getMethod = str_replace("<code>", "", $getMethod);
         $getMethod = str_replace("</code>", "", $getMethod);
         
-        return $getMethod;
+        return trim($getMethod);
     }
     
     return null;
@@ -71,7 +71,7 @@ function get_post_request($htmlContent) {
         $getMethod = str_replace("<code>", "", $getMethod);
         $getMethod = str_replace("</code>", "", $getMethod);
         
-        return $getMethod;
+        return trim($getMethod);
     }
     
     return null;

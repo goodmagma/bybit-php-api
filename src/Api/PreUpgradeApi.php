@@ -20,7 +20,7 @@ class PreUpgradeApi extends ApiRequest {
      * @return array
      */
     public function getPreUpgradeOrderHistory($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/order/history', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/pre-upgrade/order/history', $params);
         return $response->getApiData();
     }
     
@@ -33,7 +33,7 @@ class PreUpgradeApi extends ApiRequest {
      * @return array
      */
     public function getPreUpgradeTradeHistory($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/execution/list', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/pre-upgrade/execution/list', $params);
         return $response->getApiData();
     }
     
@@ -46,7 +46,7 @@ class PreUpgradeApi extends ApiRequest {
      * @return array
      */
     public function getPreUpgradeClosedPnL($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/position/closed-pnl', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/pre-upgrade/position/closed-pnl', $params);
         return $response->getApiData();
     }
     
@@ -59,7 +59,7 @@ class PreUpgradeApi extends ApiRequest {
      * @return array
      */
     public function getPreUpgradeTransactionLog($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/account/transaction-log', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/pre-upgrade/account/transaction-log', $params);
         return $response->getApiData();
     }
     
@@ -72,7 +72,7 @@ class PreUpgradeApi extends ApiRequest {
      * @return array
      */
     public function getPreUpgradeOptionDeliveryRecord($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/asset/delivery-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/pre-upgrade/asset/delivery-record', $params);
         return $response->getApiData();
     }
     
@@ -85,7 +85,7 @@ class PreUpgradeApi extends ApiRequest {
      * @return array
      */
     public function getPreUpgradeUSDCSessionSettlement($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/asset/settlement-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/pre-upgrade/asset/settlement-record', $params);
         return $response->getApiData();
     }
 

@@ -19,7 +19,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getVIPMarginData($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/data', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/data', $params);
         return $response->getApiData();
     }
 
@@ -32,7 +32,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getMarginCoinInfo($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/pledge-token', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/pledge-token', $params);
         return $response->getApiData();
     }
     
@@ -45,7 +45,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getBorrowableCoinInfo($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/borrow-token', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/borrow-token', $params);
         return $response->getApiData();
     }
     
@@ -58,7 +58,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getInterestAndQuota($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/loan-info', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/loan-info', $params);
         return $response->getApiData();
     }
     
@@ -71,7 +71,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getLoanAccountInfo($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/account', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/account', $params);
         return $response->getApiData();
     }
     
@@ -84,7 +84,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function borrow($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-cross-margin-trade/loan', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-cross-margin-trade/loan', $params);
         return $response->getApiData();
     }
     
@@ -97,7 +97,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function repay($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-cross-margin-trade/repay', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-cross-margin-trade/repay', $params);
         return $response->getApiData();
     }
 
@@ -110,7 +110,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getBorrowOrderDetail($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/orders', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/orders', $params);
         return $response->getApiData();
     }
     
@@ -123,7 +123,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function getRepaymentOrderDetail($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-cross-margin-trade/repay-history', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-cross-margin-trade/repay-history', $params);
         return $response->getApiData();
     }
     
@@ -136,7 +136,7 @@ class SpotMarginTradeNormalApi extends ApiRequest {
      * @return array
      */
     public function toggleMarginTrade($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-cross-margin-trade/switch', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-cross-margin-trade/switch', $params);
         return $response->getApiData();
     }
 }

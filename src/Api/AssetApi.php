@@ -84,7 +84,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getSingleCoinBalance($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/transfer/query-account-coin-balance', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/transfer/query-account-coin-balance', $params);
         return $response->getApiData();
     }
     
@@ -97,7 +97,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getTransferableCoin($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/transfer/query-transfer-coin-list', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/transfer/query-transfer-coin-list', $params);
         return $response->getApiData();
     }
     
@@ -110,7 +110,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function createInternalTransfer($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/asset/transfer/inter-transfer', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/asset/transfer/inter-transfer', $params);
         return $response->getApiData();
     }
     
@@ -123,7 +123,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getInternalTransferRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/transfer/query-inter-transfer-list', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/transfer/query-inter-transfer-list', $params);
         return $response->getApiData();
     }
     
@@ -136,7 +136,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getSubUID($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/transfer/query-sub-member-list', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/transfer/query-sub-member-list', $params);
         return $response->getApiData();
     }
     
@@ -149,7 +149,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function createUniversalTransfer($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/asset/transfer/universal-transfer', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/asset/transfer/universal-transfer', $params);
         return $response->getApiData();
     }
     
@@ -162,7 +162,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getUniversalTransferRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/transfer/query-universal-transfer-list', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/transfer/query-universal-transfer-list', $params);
         return $response->getApiData();
     }
     
@@ -175,7 +175,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getAllowedDepositCoinInfo($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/deposit/query-allowed-list', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/deposit/query-allowed-list', $params);
         return $response->getApiData();
     }
     
@@ -188,7 +188,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function setDepositAccount($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/asset/deposit/deposit-to-account', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/asset/deposit/deposit-to-account', $params);
         return $response->getApiData();
     }
     
@@ -201,7 +201,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getDepositRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/deposit/query-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/deposit/query-record', $params);
         return $response->getApiData();
     }
     
@@ -214,7 +214,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getSubDepositRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/deposit/query-sub-member-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/deposit/query-sub-member-record', $params);
         return $response->getApiData();
     }
     
@@ -227,7 +227,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getInternalDepositRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/deposit/query-internal-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/deposit/query-internal-record', $params);
         return $response->getApiData();
     }
     
@@ -240,7 +240,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getMasterDepositAddress($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/deposit/query-address', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/deposit/query-address', $params);
         return $response->getApiData();
     }
     
@@ -253,7 +253,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getSubDepositAddress($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/deposit/query-sub-member-address', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/deposit/query-sub-member-address', $params);
         return $response->getApiData();
     }
     
@@ -266,7 +266,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getCoinInfo($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/coin/query-info', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/coin/query-info', $params);
         return $response->getApiData();
     }
     
@@ -279,7 +279,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getWithdrawalRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/withdraw/query-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/withdraw/query-record', $params);
         return $response->getApiData();
     }
     
@@ -292,7 +292,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function getWithdrawableAmount($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/asset/withdraw/withdrawable-amount', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/asset/withdraw/withdrawable-amount', $params);
         return $response->getApiData();
     }
     
@@ -305,7 +305,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function withdraw($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/asset/withdraw/create', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/asset/withdraw/create', $params);
         return $response->getApiData();
     }
     
@@ -318,7 +318,7 @@ class AssetApi extends ApiRequest {
      * @return array
      */
     public function cancelWithdrawal($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/asset/withdraw/cancel', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/asset/withdraw/cancel', $params);
         return $response->getApiData();
     }
 

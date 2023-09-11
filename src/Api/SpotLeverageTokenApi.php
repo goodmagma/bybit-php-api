@@ -20,7 +20,7 @@ class SpotLeverageTokenApi extends ApiRequest {
      * @return array
      */
     public function getLeverageTokenInfo($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-lever-token/info', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-lever-token/info', $params);
         return $response->getApiData();
     }
 
@@ -33,7 +33,7 @@ class SpotLeverageTokenApi extends ApiRequest {
      * @return array
      */
     public function getLeveragedTokenMarket($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-lever-token/reference', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-lever-token/reference', $params);
         return $response->getApiData();
     }
     
@@ -46,7 +46,7 @@ class SpotLeverageTokenApi extends ApiRequest {
      * @return array
      */
     public function purchase($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-lever-token/purchase', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-lever-token/purchase', $params);
         return $response->getApiData();
     }
     
@@ -59,7 +59,7 @@ class SpotLeverageTokenApi extends ApiRequest {
      * @return array
      */
     public function redeem($params) {
-        $response = $this->call(ApiRequest::METHOD_POST, ' /v5/spot-lever-token/redeem', $params);
+        $response = $this->call(ApiRequest::METHOD_POST, '/v5/spot-lever-token/redeem', $params);
         return $response->getApiData();
     }
     
@@ -72,7 +72,7 @@ class SpotLeverageTokenApi extends ApiRequest {
      * @return array
      */
     public function getPurchaseRedemptionRecords($params) {
-        $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-lever-token/order-record', $params);
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/spot-lever-token/order-record', $params);
         return $response->getApiData();
     }
 
