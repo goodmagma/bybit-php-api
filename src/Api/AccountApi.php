@@ -5,7 +5,7 @@ namespace ByBit\SDK\Api;
 use ByBit\SDK\ApiRequest;
 
 /**
- * Class AccountApi
+ * Account Api
  * 
  * @see https://bybit-exchange.github.io/docs/v5/account/wallet-balance
  */

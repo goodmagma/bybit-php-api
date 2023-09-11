@@ -5,7 +5,7 @@ namespace ByBit\SDK\Api;
 use ByBit\SDK\ApiRequest;
 
 /**
- * Class PreUpgradeApi
+ * Pre Upgrade Api
  * 
  * @see https://bybit-exchange.github.io/docs/v5/asset/exchange
  */

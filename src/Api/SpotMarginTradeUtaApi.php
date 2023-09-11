@@ -5,7 +5,7 @@ namespace ByBit\SDK\Api;
 use ByBit\SDK\ApiRequest;
 
 /**
- * Class SpotMarginTradeUtaApi
+ * Spot Margin Trade (UTA) Api
  * 
  * @see https://bybit-exchange.github.io/docs/v5/spot-margin-uta/vip-margin
  */

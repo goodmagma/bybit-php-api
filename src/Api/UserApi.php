@@ -5,7 +5,7 @@ namespace ByBit\SDK\Api;
 use ByBit\SDK\ApiRequest;
 
 /**
- * Class UserApi
+ * User Api
  * 
  * @see https://bybit-exchange.github.io/docs/v5/user/create-subuid
  */

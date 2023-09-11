@@ -10,6 +10,7 @@ use ByBit\SDK\Api\AssetApi;
 use ByBit\SDK\Api\PreUpgradeApi;
 use ByBit\SDK\Api\SpotLeverageTokenApi;
 use ByBit\SDK\Api\SpotMarginTradeUtaApi;
+use ByBit\SDK\Api\SpotMarginTradeNormalApi;
 
 /**
  * ByBitApi Client
@@ -131,5 +132,13 @@ class ByBitApi {
      */
     public function spotMarginTradeUtaApi(){
         return new SpotMarginTradeUtaApi($this->key, $this->secret, $this->host);
+    }
+    
+    
+    /**
+     * Get Spot Margin Trade (Normal) Api
+     */
+    public function spotMarginTradeNormalApi(){
+        return new SpotMarginTradeNormalApi($this->key, $this->secret, $this->host);
     }
 }

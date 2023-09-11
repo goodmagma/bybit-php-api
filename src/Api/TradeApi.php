@@ -5,7 +5,7 @@ namespace ByBit\SDK\Api;
 use ByBit\SDK\ApiRequest;
 
 /**
- * Class TradeApi
+ * Trade Api
  * 
  * @see https://bybit-exchange.github.io/docs/v5/order/create-order
  */

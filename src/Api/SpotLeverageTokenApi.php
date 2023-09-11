@@ -5,7 +5,7 @@ namespace ByBit\SDK\Api;
 use ByBit\SDK\ApiRequest;
 
 /**
- * Class SpotLeverageTokenApi
+ * Spot Leverage Token Api
  * 
  * @see https://bybit-exchange.github.io/docs/v5/lt/leverage-token-info
  */
