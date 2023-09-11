@@ -165,4 +165,5 @@ class AccountApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, '/v5/account/mmp-state', $params);
         return $response->getApiData();
     }
+
 }

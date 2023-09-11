@@ -75,4 +75,5 @@ class SpotLeverageTokenApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, ' /v5/spot-lever-token/order-record', $params);
         return $response->getApiData();
     }
+
 }

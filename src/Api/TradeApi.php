@@ -152,4 +152,5 @@ class TradeApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_POST, '/v5/order/disconnected-cancel-all', $params);
         return $response->getApiData();
     }
+
 }

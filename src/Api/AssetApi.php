@@ -321,4 +321,5 @@ class AssetApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_POST, ' /v5/asset/withdraw/cancel', $params);
         return $response->getApiData();
     }
+
 }

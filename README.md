@@ -33,23 +33,9 @@ Actually the API's completion status are the following:
 
 ## Install
 
-To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
-
 ```
-{
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/denistorresan/bybit-php-api.git"
-    }
-  ],
-  "require": {
-    "denistorresan/bybit-php-api": "*@dev"
-  }
-}
+composer require denistorresan/bybit-php-api
 ```
-
-Then run `composer install`
 
 
 ## Getting started
@@ -70,6 +56,7 @@ $bybitApi = new ByBitApi();
 $bybitApi = new ByBitApi('', '', true);
 ```
 
+
 ## Create Private API Client
 
 ```php
@@ -87,7 +74,7 @@ $api_secret = 'XXXXXXXXXX';
 $sandbox = true;
 
 //create private API
-$bybitApi = new ByBitApi($api_key, $api_secret, true);
+$bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 ```
 
 

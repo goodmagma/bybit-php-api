@@ -88,4 +88,5 @@ class PreUpgradeApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, ' /v5/pre-upgrade/asset/settlement-record', $params);
         return $response->getApiData();
     }
+
 }

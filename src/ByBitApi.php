@@ -24,7 +24,7 @@ class ByBitApi {
     /**
      * @var string SDK Version
      */
-    const VERSION = "0.3.0";
+    const VERSION = "0.4.0";
     
     /**
      * @var string SDK update date
@@ -123,4 +123,5 @@ class ByBitApi {
     public function spotLeverageTokenApi(){
         return new SpotLeverageTokenApi($this->key, $this->secret, $this->host);
     }
+
 }

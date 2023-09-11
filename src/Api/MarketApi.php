@@ -191,4 +191,5 @@ class MarketApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, '/v5/market/delivery-price', $params);
         return $response->getApiData();
     }
+
 }

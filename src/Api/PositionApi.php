@@ -152,4 +152,5 @@ class PositionApi extends ApiRequest {
         $response = $this->call(ApiRequest::METHOD_GET, '/v5/position/closed-pnl', $params);
         return $response->getApiData();
     }
+
 }

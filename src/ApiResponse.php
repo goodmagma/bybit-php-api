@@ -22,6 +22,7 @@ class ApiResponse {
 
     protected $body;
 
+    
     /**
      * Constructor
      * 
@@ -31,6 +32,7 @@ class ApiResponse {
         $this->httpResponse = $guzzleResponse;
     }
 
+    
     /**
      * Get body content
      * @return mixed
@@ -42,6 +44,7 @@ class ApiResponse {
         return $this->body;
     }
 
+    
     /**
      * Get Api Code
      * @return number|mixed
@@ -51,6 +54,7 @@ class ApiResponse {
         return isset($body['retCode']) ? $body['retCode'] : -1;
     }
 
+    
     /**
      * Get Api Message
      * @return string|mixed
@@ -60,6 +64,7 @@ class ApiResponse {
         return isset($body['retMsg']) ? $body['retMsg'] : '';
     }
 
+    
     /**
      * Get Http Response
      * @return ResponseInterface
@@ -68,6 +73,7 @@ class ApiResponse {
         return $this->httpResponse;
     }
 
+    
     /**
      * Return true if Api Call is successfully, false otherwise
      * @return boolean
@@ -81,6 +87,7 @@ class ApiResponse {
         return false;
     }
 
+    
     /**
      * Get Api Data
      * @return mixed
