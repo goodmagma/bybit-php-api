@@ -61,7 +61,7 @@ class ApiRequest {
      * @throws Exceptions\HttpException
      * @throws Exceptions\InvalidApiUriException
      */
-    public function call($method, $uri, array $params = [], array $headers = [], $timeout = 30) {
+    protected function call($method, $uri, array $params = [], array $headers = [], $timeout = 30) {
         if (!$this->host && strpos($uri, '://') === false) {
             $exception = new InvalidApiUriException('Invalid base_uri or uri, must set base_uri or set uri to a full url');
             throw $exception;
@@ -113,8 +113,8 @@ class ApiRequest {
         switch ($method) {
             case self::METHOD_GET:
                 if ($hasParams) {
-                    //$options['query'] = $params;
-                    $uri = $uri.'?'.$encoded_params;
+                    $options['query'] = $params;
+                    //$uri = $uri.'?'.$encoded_params;
                 }
                 break;
             //case self::METHOD_DELETE:
