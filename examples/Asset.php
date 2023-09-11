@@ -8,7 +8,7 @@ use ByBit\SDK\Enums\AccountType;
 //create private API
 $bybitApi = new ByBitApi($api_key, $api_secret, $sandbox);
 
-// Get API Key Information
+// Get Coin Exchange Records
 $params = [];
-$result = $bybitApi->userApi()->getAPIKeyInformation($params);
+$result = $bybitApi->assetApi()->getCoinExchangeRecords($params);
 var_dump($result);

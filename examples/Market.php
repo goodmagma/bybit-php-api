@@ -1,22 +1,20 @@
 <?php
 include '../vendor/autoload.php';
+include 'key_secret.php';
 
 use ByBit\SDK\ByBitApi;
-
-include 'key_secret.php';
+use ByBit\SDK\Enums\Category;
 
 //create public API (no auth required)
 $bybitApi = new ByBitApi('', '', $sandbox);
 
 // Get Kline
-// https://bybit-exchange.github.io/docs/v5/market/kline
-$params = ['category' => 'spot', 'symbol' => 'BTCUSDT', 'interval' => '1'];
+$params = ['category' => Category::SPOT, 'symbol' => 'BTCUSDT', 'interval' => '1'];
 $klines = $bybitApi->marketApi()->getKline($params);
 var_dump($klines);
 
 
 // Get Instruments Info
-// https://bybit-exchange.github.io/docs/v5/market/instrument
-$params = ['category' => 'spot', 'status' => 'Trading'];
+$params = ['category' => Category::SPOT, 'status' => 'Trading'];
 $instrumentsInfo = $bybitApi->marketApi()->getInstrumentsInfo($params);
 var_dump($instrumentsInfo);
