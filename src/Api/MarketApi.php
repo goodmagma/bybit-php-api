@@ -12,6 +12,19 @@ use ByBit\SDK\ApiRequest;
 class MarketApi extends ApiRequest {
     
     /**
+     * Get Bybit Server Time
+     * @see https://bybit-exchange.github.io/docs/v5/market/time
+     *
+     * @param $params array
+     * @return array
+     */
+    public function getBybitServerTime($params) {
+        $response = $this->call(ApiRequest::METHOD_GET, '/v5/market/time', $params);
+        return $response->getApiData();
+    }
+    
+    
+    /**
      * Get Kline
      * @see https://bybit-exchange.github.io/docs/v5/market/kline
      * 
