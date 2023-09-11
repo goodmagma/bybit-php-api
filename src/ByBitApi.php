@@ -11,6 +11,7 @@ use ByBit\SDK\Api\PreUpgradeApi;
 use ByBit\SDK\Api\SpotLeverageTokenApi;
 use ByBit\SDK\Api\SpotMarginTradeUtaApi;
 use ByBit\SDK\Api\SpotMarginTradeNormalApi;
+use ByBit\SDK\Api\InstitutionalLendingApi;
 
 /**
  * ByBitApi Client
@@ -141,4 +142,13 @@ class ByBitApi {
     public function spotMarginTradeNormalApi(){
         return new SpotMarginTradeNormalApi($this->key, $this->secret, $this->host);
     }
+    
+    
+    /**
+     * Institutional Lending Api
+     */
+    public function institutionalLendingApi(){
+        return new InstitutionalLendingApi($this->key, $this->secret, $this->host);
+    }
+
 }
