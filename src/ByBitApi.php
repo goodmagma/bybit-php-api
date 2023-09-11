@@ -9,6 +9,7 @@ use ByBit\SDK\Api\UserApi;
 use ByBit\SDK\Api\AssetApi;
 use ByBit\SDK\Api\PreUpgradeApi;
 use ByBit\SDK\Api\SpotLeverageTokenApi;
+use ByBit\SDK\Api\SpotMarginTradeUtaApi;
 
 /**
  * ByBitApi Client
@@ -124,4 +125,11 @@ class ByBitApi {
         return new SpotLeverageTokenApi($this->key, $this->secret, $this->host);
     }
 
+    
+    /**
+     * Get Spot Margin Trade (UTA) Api
+     */
+    public function spotMarginTradeUtaApi(){
+        return new SpotMarginTradeUtaApi($this->key, $this->secret, $this->host);
+    }
 }
