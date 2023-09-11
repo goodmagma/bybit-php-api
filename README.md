@@ -1,6 +1,8 @@
 [![Latest Version](https://img.shields.io/github/release/denistorresan/bybit-php-api.svg?style=flat-square)](https://github.com/denistorresan/bybit-php-api/releases) 
-[![GitHub last commit](https://img.shields.io/github/last-commit/denistorresan/bybit-php-api.svg?style=flat-square)](#) 
-[![Packagist Downloads](https://img.shields.io/packagist/dt/denistorresan/bybit-php-api.svg?style=flat-square)](https://packagist.org/packages/denistorresan/bybit-php-api) 
+[![Latest commit](https://img.shields.io/github/last-commit/denistorresan/bybit-php-api.svg?style=flat-square)](#)
+[![PHP Version](https://img.shields.io/packagist/php-v/denistorresan/bybit-php-api.svg?color=green)](https://secure.php.net)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/denistorresan/bybit-php-api.svg?style=flat-square)](https://packagist.org/packages/denistorresan/bybit-php-api)
+[![License](https://poser.pugx.org/denistorresan/bybit-php-api/license)](LICENSE)
 
 # PHP SDK for ByBit V5 API
 
