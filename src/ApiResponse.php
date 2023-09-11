@@ -20,6 +20,9 @@ class ApiResponse {
      */
     protected $httpResponse;
 
+    /**
+     * @var object json body
+     */
     protected $body;
 
     
@@ -32,6 +35,15 @@ class ApiResponse {
         $this->httpResponse = $guzzleResponse;
     }
 
+    
+    /**
+     * Get Http Response
+     * @return ResponseInterface
+     */
+    public function getHttpResponse() {
+        return $this->httpResponse;
+    }
+    
     
     /**
      * Get body content
@@ -66,15 +78,6 @@ class ApiResponse {
 
     
     /**
-     * Get Http Response
-     * @return ResponseInterface
-     */
-    public function getHttpResponse() {
-        return $this->httpResponse;
-    }
-
-    
-    /**
      * Return true if Api Call is successfully, false otherwise
      * @return boolean
      */
@@ -86,7 +89,7 @@ class ApiResponse {
         }
         return false;
     }
-
+    
     
     /**
      * Get Api Data

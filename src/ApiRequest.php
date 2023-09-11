@@ -34,7 +34,7 @@ class ApiRequest {
     protected $key;
     protected $secret;
     protected $host;
-    protected $config = [];
+    protected $config = ['debug' => false];
 
     
     /**
@@ -83,16 +83,20 @@ class ApiRequest {
         //set user agent
         $options['headers']['User-Agent'] = ByBitApi::NAME . '/' . ByBitApi::VERSION;
 
+        //build query string
+        $query_string = '';
+        foreach ($params as $key => $value) {
+            $query_string .= sprintf('%s=%s&', $key, $value);
+        }
+        $query_string = rtrim($query_string, '&');
+
         //authorization?
         if( !empty($this->key) && !empty($this->secret) ){
             $timestamp = time() * 1000;
 
             $encoded_params = '';
             if( $method == self::METHOD_GET ){
-                foreach ($params as $key => $value) {
-                    $encoded_params .= sprintf('%s=%s&', $key, $value);
-                }
-                $encoded_params = rtrim($encoded_params, '&');
+                $encoded_params = $query_string;
             }
             else{
                 $encoded_params = empty($params) ? '' : json_encode($params, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
@@ -113,13 +117,10 @@ class ApiRequest {
         switch ($method) {
             case self::METHOD_GET:
                 if ($hasParams) {
-                    $options['query'] = $params;
-                    //$uri = $uri.'?'.$encoded_params;
+                    $uri = $uri.'?'.$query_string;
                 }
                 break;
-            //case self::METHOD_DELETE:
-                //$hasParam AND $options['query'] = $params;
-                //break;
+            case self::METHOD_DELETE:
             case self::METHOD_PUT:
             case self::METHOD_POST:
                 if ($hasParams) {
@@ -138,9 +139,14 @@ class ApiRequest {
         try {
             $guzzleResponse = $client->request($method, $uri, $options);
             $response = new ApiResponse($guzzleResponse);
-
-            //failed?
-            if(!$response->isSuccessful()){
+            
+            //check if it's an error response
+            if ($response->getHttpResponse()->getStatusCode() != 200) {
+                $exception = new HttpException($response->getHttpResponse()->getReasonPhrase(), $response->getHttpResponse()->getStatusCode());
+                throw $exception;
+            }
+            //check if response is not succesful
+            else if( !$response->isSuccessful() ){
                 $exception = new HttpException($response->getApiMessage(), $response->getApiCode());
                 throw $exception;
             }
