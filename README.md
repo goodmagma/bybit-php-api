@@ -42,9 +42,7 @@ composer require denistorresan/bybit-php-api
 
 ## Getting started
 
-
-## Create Public API Client
-
+### Create Public API Client
 
 ```php
 include '../vendor/autoload.php';
@@ -58,8 +56,7 @@ $bybitApi = new ByBitApi();
 $bybitApi = new ByBitApi('', '', true);
 ```
 
-
-## Create Private API Client
+### Create Private API Client
 
 ```php
 include '../vendor/autoload.php';
@@ -102,7 +99,6 @@ Configure `key_secret.php` with your API Keys and run example like:
 php Position.php
 ```
 
-
 ## Contributing
 
 Contributions are what makes the open source community such an amazing place to learn, inspire and create. Any
@@ -124,5 +120,3 @@ If you want to make a PR:
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-
-
