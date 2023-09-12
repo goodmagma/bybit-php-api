@@ -7,4 +7,3 @@ composer.lock
 .settings
 examples/key_secret.php
 examples/test_*
-/.gtm/
