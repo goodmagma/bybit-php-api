@@ -1,5 +1,5 @@
 {
-	"name" : "denistorresan/bybit-php-api",
+	"name" : "goodmagma/bybit-php-api",
 	"description" : "PHP SDK for ByBit V5 API",
 	"keywords" : [
 		"bybit",
@@ -18,7 +18,7 @@
 			"ByBit\\SDK\\" : "src/"
 		}
 	},
-	"homepage" : "https://github.com/denistorresan/bybit-php-api",
+	"homepage" : "https://github.com/goodmagma/bybit-php-api",
 	"authors" : [{
 			"name" : "Denis Torresan",
 			"email" : "denis.torresan@gmail.com"

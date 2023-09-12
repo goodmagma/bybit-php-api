@@ -1,8 +1,8 @@
-[![Latest Version](https://img.shields.io/github/release/denistorresan/bybit-php-api.svg?style=flat-square)](https://github.com/denistorresan/bybit-php-api/releases) 
-[![Latest commit](https://img.shields.io/github/last-commit/denistorresan/bybit-php-api.svg?style=flat-square)](#)
-[![PHP Version](https://img.shields.io/packagist/php-v/denistorresan/bybit-php-api.svg?color=green)](https://secure.php.net)
-[![Packagist Downloads](https://img.shields.io/packagist/dt/denistorresan/bybit-php-api.svg?style=flat-square)](https://packagist.org/packages/denistorresan/bybit-php-api)
-[![License](https://poser.pugx.org/denistorresan/bybit-php-api/license)](LICENSE)
+[![Latest Version](https://img.shields.io/github/release/goodmagma/bybit-php-api.svg?style=flat-square)](https://github.com/goodmagma/bybit-php-api/releases) 
+[![Latest commit](https://img.shields.io/github/last-commit/goodmagma/bybit-php-api.svg?style=flat-square)](#)
+[![PHP Version](https://img.shields.io/packagist/php-v/goodmagma/bybit-php-api.svg?color=green)](https://secure.php.net)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/goodmagma/bybit-php-api.svg?style=flat-square)](https://packagist.org/packages/goodmagma/bybit-php-api)
+[![License](https://poser.pugx.org/goodmagma/bybit-php-api/license)](LICENSE)
 
 # PHP SDK for ByBit V5 API
 
@@ -36,7 +36,7 @@ Actually the API's completion status are the following:
 ## Install
 
 ```
-composer require denistorresan/bybit-php-api
+composer require goodmagma/bybit-php-api
 ```
 
 
@@ -106,7 +106,7 @@ contributions you make are **greatly appreciated**.
 
 - Give us a star :star:
 - Fork and Clone! Awesome
-- Select existing [issues](https://github.com/denistorresan/bybit-php-api/issues) or create a [new issue](https://github.com/denistorresan/bybit-php-api/issues/new) and give us a PR with your bugfix or improvement after. We love it ❤️
+- Select existing [issues](https://github.com/goodmagma/bybit-php-api/issues) or create a [new issue](https://github.com/goodmagma/bybit-php-api/issues/new) and give us a PR with your bugfix or improvement after. We love it ❤️
 
 If you want to make a PR:
 
