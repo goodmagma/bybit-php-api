@@ -12,6 +12,7 @@ use ByBit\SDK\Api\SpotLeverageTokenApi;
 use ByBit\SDK\Api\SpotMarginTradeUtaApi;
 use ByBit\SDK\Api\SpotMarginTradeNormalApi;
 use ByBit\SDK\Api\InstitutionalLendingApi;
+use ByBit\SDK\Api\C2CLendingApi;
 
 /**
  * ByBitApi Client
@@ -149,6 +150,14 @@ class ByBitApi {
      */
     public function institutionalLendingApi(){
         return new InstitutionalLendingApi($this->key, $this->secret, $this->host);
+    }
+
+    
+    /**
+     * C2C Lending Api
+     */
+    public function c2CLendingApi(){
+        return new C2CLendingApi($this->key, $this->secret, $this->host);
     }
 
 }

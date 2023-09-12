@@ -27,8 +27,8 @@ Actually the API's completion status are the following:
  Spot Leverage Token        | 100%      | v0.3.0 | [Spot Leverage Token API Doc](https://bybit-exchange.github.io/docs/v5/lt/leverage-token-info)
  Spot Margin Trade (UTA)    | 100%      | v0.4.0 | [Spot Margin Trade (UTA) API Doc](https://bybit-exchange.github.io/docs/v5/spot-margin-uta/vip-margin)
  Spot Margin Trade (Normal) | 100%      | v0.4.0 | [Spot Margin Trade (Normal) API Doc](https://bybit-exchange.github.io/docs/v5/spot-margin-normal/vip-margin)
- Institutional Lending      | 0%        |        | [Institutional Lending API Doc](https://bybit-exchange.github.io/docs/v5/otc/margin-product-info)
- C2C Lending                | 0%        |        | [C2C Lending API Doc](https://bybit-exchange.github.io/docs/v5/c2c-lend/coin-info)
+ Institutional Lending      | 100%      | v0.5.0 | [Institutional Lending API Doc](https://bybit-exchange.github.io/docs/v5/otc/margin-product-info)
+ C2C Lending                | 100%      | v0.5.0 | [C2C Lending API Doc](https://bybit-exchange.github.io/docs/v5/c2c-lend/coin-info)
  Broker                     | 0%        |        | [Broker API Doc](https://bybit-exchange.github.io/docs/v5/broker/earning)
  WebSocket Stream           | 0%        |        | [WebSocket Stream API Doc](https://bybit-exchange.github.io/docs/v5/ws/connect)
 
