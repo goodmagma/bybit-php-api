@@ -13,6 +13,7 @@ use ByBit\SDK\Api\SpotMarginTradeUtaApi;
 use ByBit\SDK\Api\SpotMarginTradeNormalApi;
 use ByBit\SDK\Api\InstitutionalLendingApi;
 use ByBit\SDK\Api\C2CLendingApi;
+use ByBit\SDK\Api\BrokerApi;
 
 /**
  * ByBitApi Client
@@ -28,12 +29,12 @@ class ByBitApi {
     /**
      * @var string SDK Version
      */
-    const VERSION = "0.5.0";
+    const VERSION = "0.6.0";
     
     /**
      * @var string SDK update date
      */
-    const UPDATE_DATE = "2023.09.12";
+    const UPDATE_DATE = "2023.09.22";
 
     /**
      * @var string sandbox API URL
@@ -158,6 +159,14 @@ class ByBitApi {
      */
     public function c2CLendingApi(){
         return new C2CLendingApi($this->key, $this->secret, $this->host);
+    }
+
+    
+    /**
+     * Broker Api
+     */
+    public function brokerApi(){
+        return new BrokerApi($this->key, $this->secret, $this->host);
     }
 
 }

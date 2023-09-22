@@ -29,7 +29,7 @@ Actually the API's completion status are the following:
  Spot Margin Trade (Normal) | 100%      | v0.4.0 | [Spot Margin Trade (Normal) API Doc](https://bybit-exchange.github.io/docs/v5/spot-margin-normal/vip-margin)
  Institutional Lending      | 100%      | v0.5.0 | [Institutional Lending API Doc](https://bybit-exchange.github.io/docs/v5/otc/margin-product-info)
  C2C Lending                | 100%      | v0.5.0 | [C2C Lending API Doc](https://bybit-exchange.github.io/docs/v5/c2c-lend/coin-info)
- Broker                     | 0%        |        | [Broker API Doc](https://bybit-exchange.github.io/docs/v5/broker/earning)
+ Broker                     | 100%      | v0.6.0 | [Broker API Doc](https://bybit-exchange.github.io/docs/v5/broker/earning)
  WebSocket Stream           | 0%        |        | [WebSocket Stream API Doc](https://bybit-exchange.github.io/docs/v5/ws/connect)
 
 
