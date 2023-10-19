@@ -10,9 +10,10 @@ namespace ByBit\SDK\Enums;
 class AccountType {
 
     const CONTRACT = 'CONTRACT';// Derivatives Account
-    const SPOT = 'SPOT';        // Spot Account
-    const OPTION = 'OPTION';    // USDC Account
     const UNIFIED = 'UNIFIED';  // UMA or UTA
     const FUND = 'FUND';        // Funding Account
+
+    const SPOT = 'SPOT';        // Spot Account
+    const OPTION = 'OPTION';    // USDC Account
 
 }
