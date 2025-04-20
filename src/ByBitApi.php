@@ -25,12 +25,12 @@ class ByBitApi {
      * @var string SDK Version
      */
     const NAME = "ByBit-PHP-SDK";
-    
+
     /**
      * @var string SDK Version
      */
     const VERSION = "0.6.1";
-    
+
     /**
      * @var string SDK update date
      */
@@ -50,16 +50,16 @@ class ByBitApi {
      * @var string demo API URL
      */
     const DEMO_API_URL = "https://api-demo.bybit.com";
-    
-    
+
+
     protected $key;
     protected $secret;
     protected $host;
-    
-    
+
+
     /**
      * Constructor
-     * 
+     *
      * @param string $key
      * @param string $secret
      * @param string $sandbox, default false, true for use sandbox api
@@ -69,23 +69,23 @@ class ByBitApi {
         $this->secret = $secret;
         $this->host = $host;
     }
-    
-    
+
+
     /**
      * Get Market Api
      */
     public function marketApi(){
         return new MarketApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Get Trade Api
      */
     public function tradeApi(){
         return new TradeApi($this->key, $this->secret, $this->host);
     }
-    
+
 
     /**
      * Get Position Api
@@ -93,39 +93,39 @@ class ByBitApi {
     public function positionApi(){
         return new PositionApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Get Pre Upgrade Api
      */
     public function preUpgradeApi(){
         return new PreUpgradeApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Get Account Api
      */
     public function accountApi(){
         return new AccountApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Get Asset Api
      */
     public function assetApi(){
         return new AssetApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Get User Api
      */
     public function userApi(){
         return new UserApi($this->key, $this->secret, $this->host);
     }
-    
+
 
     /**
      * Get Spot Leverage Token Api
@@ -134,23 +134,23 @@ class ByBitApi {
         return new SpotLeverageTokenApi($this->key, $this->secret, $this->host);
     }
 
-    
+
     /**
      * Get Spot Margin Trade (UTA) Api
      */
     public function spotMarginTradeUtaApi(){
         return new SpotMarginTradeUtaApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Get Spot Margin Trade (Normal) Api
      */
     public function spotMarginTradeNormalApi(){
         return new SpotMarginTradeNormalApi($this->key, $this->secret, $this->host);
     }
-    
-    
+
+
     /**
      * Institutional Lending Api
      */
@@ -158,7 +158,7 @@ class ByBitApi {
         return new InstitutionalLendingApi($this->key, $this->secret, $this->host);
     }
 
-    
+
     /**
      * C2C Lending Api
      */
@@ -166,12 +166,20 @@ class ByBitApi {
         return new C2CLendingApi($this->key, $this->secret, $this->host);
     }
 
-    
+
     /**
      * Broker Api
      */
     public function brokerApi(){
         return new BrokerApi($this->key, $this->secret, $this->host);
+    }
+
+    /**
+     * Custom Api
+     */
+    public function customApi()
+    {
+        return new ApiRequest($this->key, $this->secret, $this->host);
     }
 
 }

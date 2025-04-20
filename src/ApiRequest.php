@@ -17,7 +17,7 @@ class ApiRequest {
      * @var string ByBit API RECV Window
      */
     const BAPI_RECV_WINDOW = "5000";
-    
+
     /**
      * @var string ByBit API Sign Type
      */
@@ -36,10 +36,10 @@ class ApiRequest {
     protected $host;
     protected $config = ['debug' => false];
 
-    
+
     /**
      * Constructor
-     * 
+     *
      * @param string $key
      * @param string $secret
      * @param string $host
@@ -49,15 +49,15 @@ class ApiRequest {
         $this->secret = $secret;
         $this->host = $host;
     }
-    
-    
+
+
     /**
      * @param string $method
      * @param string $uri
      * @param array $params
      * @param array $headers
      * @param int $timeout
-     * @return ResponseInterface 
+     * @return ResponseInterface
      * @throws Exceptions\HttpException
      * @throws Exceptions\InvalidApiUriException
      */
@@ -66,7 +66,7 @@ class ApiRequest {
             $exception = new InvalidApiUriException('Invalid base_uri or uri, must set base_uri or set uri to a full url');
             throw $exception;
         }
-        
+
         //Guzzle Config
         $config = [
             'base_uri'        => $this->host,
@@ -74,7 +74,7 @@ class ApiRequest {
             'connect_timeout' => 30,
             'http_errors'     => false
         ] + $this->config;
-        
+
         //initialize options
         $options = [
             'headers' => []
@@ -132,14 +132,14 @@ class ApiRequest {
                 $exception = new HttpException('Unsupported method ' . $method, 0);
                 throw $exception;
         }
-        
+
         //initialize Guzzle Client
         $client = new Client($config);
-        
+
         try {
             $guzzleResponse = $client->request($method, $uri, $options);
             $response = new ApiResponse($guzzleResponse);
-            
+
             //check if it's an error response
             if ($response->getHttpResponse()->getStatusCode() != 200) {
                 $exception = new HttpException($response->getHttpResponse()->getReasonPhrase(), $response->getHttpResponse()->getStatusCode());
@@ -152,19 +152,34 @@ class ApiRequest {
             }
 
             return $response;
-        } 
+        }
         catch (\GuzzleHttp\Exception\GuzzleException $e) {
             $exception = new HttpException($e->getMessage(), $e->getCode(), $e);
             throw $exception;
         }
         catch (HttpException $exception) {
             throw $exception;
-        } 
+        }
         catch (\Exception $e) {
             $exception = new HttpException($e->getMessage(), $e->getCode(), $e);
             throw $exception;
         }
-        
+
+    }
+
+    /**
+     * Custom Request (In case you need to call an endpoint not implemented in the SDK yet, or for testing purposes)
+     * @param string $method
+     * @param string $uri
+     * @param array $params
+     * @param array $headers
+     * @param int $timeout
+     * @return array
+     */
+    public function request($method, $uri, array $params = [], array $headers = [], $timeout = 30)
+    {
+        $response =  $this->call($method, $uri, $params, $headers, $timeout);
+        return $response->getApiData();
     }
 
 }
