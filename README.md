@@ -90,6 +90,16 @@ $positions = $bybitApi->positionApi()->getPositionInfo($params);
 var_dump($positions);
 ```
 
+## Custom API Client
+When you need to send request to an endpoint which is not implemented in the SDK, you can use the `customApi()->request()`.
+```php
+// Get Transferable Amount (Unified)
+$params = ['coinName' => $coin];
+$uri = 'v5/account/withdrawal';
+$method = \ByBit\SDK\ApiRequest::METHOD_GET;
+$transferableAmount = $bybitApi->customApi()->request($method, $uri, $params);
+```
+
 See [additional examples](examples)
 
 
